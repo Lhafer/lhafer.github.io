@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: auto;
-    background: linear-gradient(to left, rgb(20, 20, 20), black);
+    background: linear-gradient(to right, rgb(31, 29, 29), black);
 }
 
 .topLink {
@@ -104,19 +104,23 @@ dl {
     width: 75%;
     height: 30%;
     background-color: white;
-    border-style: solid;
-    border-color: black;
     border-radius: 50%;
-
-
+    box-shadow: 0px 0px 100px purple;
+    visibility: visible;
 }
 
 #projects {
     margin-top: 50%;
-    border-color: white;
-    border-style: solid;
     height: 1000px;
     width: 100%;
+    border-style: solid;
+    visibility: hidden;
+
+}
+
+
+.circle:nth-child(1) {
+    margin-top: 200px;
 }
 
 .circle:nth-child(:increment) {
