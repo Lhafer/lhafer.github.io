@@ -11,11 +11,6 @@ body {
     background: linear-gradient(to right, rgb(31, 29, 29), black);
 }
 
-.topLink {
-    margin-left: 10px;
-}
-
-
 #topBar {
     display: flex;
     position: fixed;
@@ -25,11 +20,34 @@ body {
     background: linear-gradient(to left, white, black);
     z-index: 99999;
     justify-content: center;
+    box-shadow: 0px -10px 10px grey inset;
 }
 
+.topLink {
+    margin-left: 40px;
+    height: 35px;
+    width: 100px;
+    border-style: ridge;
+    border-color: white;
+    border-radius: 5px;
+    background-color: grey;
+    align-items: center;
+}
 
+.topLink a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 10px;
+}
 
+.topLink:hover {
+    border-color: black;
+}
 
+.topLink a:hover {
+    box-shadow: 0px 0px 5px black;
+}
 
 
 
@@ -39,7 +57,7 @@ body {
 
 #contact {
     display: flex;
-    margin-top: 50px;
+    margin-top: 2000px;
 }
 
 dl {
@@ -99,13 +117,20 @@ dl {
 
 
 
-
-.circle {
+.circleCont {
+    border-radius: 50%;
     width: 75%;
     height: 30%;
+    animation: 4s ease infinite shadowColor;
+    box-shadow: 0px 0px 100px purple;
+    visibility: visible;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
     background-color: white;
     border-radius: 50%;
-    box-shadow: 0px 0px 100px purple;
     visibility: visible;
 }
 
@@ -129,12 +154,12 @@ dl {
 
 
 
-.circle:nth-child(odd) {
+.circleCont:nth-child(odd) {
 
     margin-left: -30%;
 }
 
-.circle:nth-child(even) {
+.circleCont:nth-child(even) {
     margin-left: auto;
     margin-right: -30%;
 }
@@ -149,8 +174,31 @@ dl {
     transition: 0.3s;
 }
 
+@keyframes shadowColor {
+    0% {
+        box-shadow: 0px 0px 100px rgb(146, 15, 163);
+    }
+
+    25% {
+        box-shadow: 0px 0px 100px rgb(85, 25, 163);
+    }
+
+    75% {
+        box-shadow: 0px 0px 100px rgb(10, 7, 175);
+    }
+
+    100% {
+        box-shadow: 0px 0px 100px rgb(146, 15, 163);
+    }
+}
+
 @keyframes otpRise {
     to {
         transform: scale(1.2);
     }
+}
+
+.box {
+    width: 100%;
+    height: 500px;
 }
