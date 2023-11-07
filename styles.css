@@ -9,7 +9,10 @@ body {
     padding: 0;
     overflow: auto;
     background: linear-gradient(to right, rgb(31, 29, 29), black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 
 
 
@@ -64,15 +67,50 @@ body.scrolled #topBar {
     position: relative;
     text-align: center;
     color: white;
+    background-image: url("download.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    ;
 }
 
 /* Style for the banner image */
-.banner img {
-    width: 100%;
-    height: auto;
+
+#colorChangeButton {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 60%;
+    top: 65%;
+    opacity: 0.6;
+    background-color: rgba(248, 243, 243, 0.5);
+    padding: 3px;
+    border: hidden;
 }
 
+#learnMore .clicked {
+    background-color: rgba(248, 243, 243, 0.8);
+}
 
+.text {
+    position: absolute;
+    font-family: 'Sometype Mono';
+    top: 45%;
+    opacity: 0.6;
+    color: black;
+    font-weight: bold;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(248, 243, 243, 0.5);
+    padding: 10px;
+    padding-left: 15px;
+}
+
+#textU {
+    top: 55%;
+    left: 60%;
+}
 
 #contact {
     display: flex;
