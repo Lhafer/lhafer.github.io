@@ -11,16 +11,24 @@ body {
     background: linear-gradient(to right, rgb(31, 29, 29), black);
 }
 
+
+
 #topBar {
     display: flex;
     position: fixed;
-    top: 0px;
+    top: -100px;
     width: 100%;
     height: 50px;
     background: linear-gradient(to left, white, black);
-    z-index: 99999;
+    z-index: 999;
+    padding: 10px;
     justify-content: center;
     box-shadow: 0px -10px 10px grey inset;
+    transition: top 0.3s;
+}
+
+body.scrolled #topBar {
+    top: 0px;
 }
 
 .topLink {
@@ -52,6 +60,17 @@ body {
 
 
 
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* Style for the banner image */
+.banner img {
+    width: 100%;
+    height: auto;
+}
 
 
 
@@ -134,8 +153,13 @@ dl {
     visibility: visible;
 }
 
+
+
+
+
+
 #projects {
-    margin-top: 50%;
+    margin-top: 100%;
     height: 1000px;
     width: 100%;
     border-style: solid;
