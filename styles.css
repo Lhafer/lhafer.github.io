@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     margin: 0;
@@ -11,6 +12,7 @@ body {
     background: linear-gradient(to right, rgb(31, 29, 29), black);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 
