@@ -74,8 +74,7 @@ body.scrolled #topBar {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    height: 500px;
-    ;
+    height: 100vh;
 }
 
 /* Style for the banner image */
@@ -86,13 +85,13 @@ body.scrolled #topBar {
     left: 60%;
     top: 65%;
     opacity: 0.6;
-    background-color: rgba(248, 243, 243, 0.5);
+    background-color: rgba(248, 243, 243, 0.8);
     padding: 3px;
-    border: hidden;
+    border: none;
 }
 
-#learnMore .clicked {
-    background-color: rgba(248, 243, 243, 0.8);
+#colorChangeButton.clicked {
+    background-color: rgba(15, 13, 13, 0.8);
 }
 
 .text {
