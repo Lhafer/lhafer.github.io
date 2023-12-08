@@ -63,8 +63,6 @@ body.scrolled #topBar {
 }
 
 
-
-
 .banner {
     position: relative;
     text-align: center;
@@ -113,9 +111,148 @@ body.scrolled #topBar {
     left: 60%;
 }
 
+
+
+
+
+
+
+
+
+#projects{
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    margin: -5%;
+}
+
+.projectWrapper{
+    visibility: visible;
+    margin-top: 35%;
+    width: 75%;
+    height: 30%;
+
+}
+.circleCont {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    animation: 4s ease infinite shadowColor;
+    box-shadow: 0px 0px 100px purple;
+    position: relative;
+    visibility: visible;
+}
+.circleImg{
+    width: 100%;
+    height: 100%; /* Maintain the image's aspect ratio */
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 1;
+    z-index: 500;
+}
+.circleImg2{
+    width: 100%;
+    height: 100%; /* Maintain the image's aspect ratio */
+    border-radius: 50%;
+    opacity: 0;
+    object-fit: cover;
+    position: absolute;
+}
+
+
+.circle:hover .circleImg {
+    animation: 0.2s ease-in-out 1s 1 disappear;
+    animation-fill-mode: forwards;
+    
+}
+
+.circle:hover .circleImg2 {
+    animation: 0.2s ease-in-out 1s 1 appear;
+    animation-fill-mode: forwards;
+}
+.circle:hover #portIframe {
+    animation: 0.2s ease-in-out 1s 1 disappear;
+    animation-fill-mode: forwards;
+}
+.circle {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    visibility: visible;
+    
+}
+
+
+.projectTitle{
+    color: white;
+    padding: 10px;
+    width: 400px;
+}
+
+.projects .projectWrapper:nth-of-type(1) {
+    margin-top:auto;
+}
+
+.projects .projectWrapper:nth-of-type(odd) .projectTitle {
+    margin-left: auto;
+}
+  
+.projects .projectWrapper:nth-of-type(even) .projectTitle {
+    margin-right: auto;
+}
+.projects {
+    margin-top: 10%;
+    height: 1000px;
+    width: 100%;
+    border-style: solid;
+    visibility: hidden;
+
+}
+
+
+.projectWrapper:nth-child(odd) {
+    margin-left: -30%;
+}
+
+.projectWrapper:nth-child(even) {
+    margin-left: auto;
+    margin-right: -30%;
+}
+
+.circle:hover {
+    animation: 0.2s ease-in-out 0s 1 otpRise;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+#portIframe {
+    /* Your styles here */
+    position: absolute;
+    z-index: 500;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #contact {
     display: flex;
-    margin-top: 2000px;
+    margin-top: 350%;
 }
 
 dl {
@@ -133,18 +270,18 @@ dl {
 
 }
 
-.thing {
+.contact_and_pic {
     display: flex;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    
 }
 
 .contact {
     margin-right: auto;
     margin-left: -280px;
-
+    margin-top: 100%;
     margin-top: auto;
     padding: 5px;
     height: max-content;
@@ -158,89 +295,12 @@ dl {
     border-color: white;
     z-index: 7;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.circleCont {
-    border-radius: 50%;
-    width: 75%;
-    height: 30%;
-    animation: 4s ease infinite shadowColor;
-    box-shadow: 0px 0px 100px purple;
-    visibility: visible;
-}
-.circleImg{
+.box {
     width: 100%;
-    height: 100%; /* Maintain the image's aspect ratio */
-    border-radius: 50%;
-    
-}
-.circle {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border-radius: 50%;
-    visibility: visible;
+    height: 500px;
 }
 
 
-
-
-
-
-#projects {
-    margin-top: 100%;
-    height: 1000px;
-    width: 100%;
-    border-style: solid;
-    visibility: hidden;
-
-}
-
-
-.circle:nth-child(1) {
-    margin-top: 200px;
-}
-
-.circle:nth-child(:increment) {
-    margin-top: 50%;
-}
-
-
-
-.circleCont:nth-child(odd) {
-
-    margin-left: -30%;
-}
-
-.circleCont:nth-child(even) {
-    margin-left: auto;
-    margin-right: -30%;
-}
-
-.circle:hover {
-    animation: 0.2s ease-in-out 0s 1 otpRise;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-}
-
-.circle:hover::after {
-    transition: 0.3s;
-}
 
 @keyframes shadowColor {
     0% {
@@ -261,12 +321,23 @@ dl {
 }
 
 @keyframes otpRise {
-    to {
+    100% {
         transform: scale(1.2);
     }
 }
-
-.box {
-    width: 100%;
-    height: 500px;
+@keyframes appear{
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes disappear{
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
 }
