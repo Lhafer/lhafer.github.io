@@ -159,6 +159,7 @@ body.scrolled #topBar {
     opacity: 0;
     object-fit: cover;
     position: absolute;
+    
 }
 
 
@@ -228,6 +229,10 @@ body.scrolled #topBar {
     animation-fill-mode: forwards;
 }
 
+#portLink{
+    z-index: 994;
+}
+
 #portIframe {
     /* Your styles here */
     position: absolute;
@@ -235,6 +240,7 @@ body.scrolled #topBar {
     height: 100%;
     width: 100%;
     border-radius: 50%;
+    border-style: hidden;
 }
 
 
@@ -327,6 +333,9 @@ dl {
     }
 }
 @keyframes appear{
+    to{
+        z-index: 600;
+    }
     50%{
         opacity: 0.5;
     }
