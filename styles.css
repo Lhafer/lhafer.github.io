@@ -67,7 +67,7 @@ body.scrolled #topBar {
     position: relative;
     text-align: center;
     color: white;
-    background-image: url("download.jpg");
+    background-image: url("salami_temp.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -89,7 +89,8 @@ body.scrolled #topBar {
 }
 
 #colorChangeButton.clicked {
-    background-color: rgba(15, 13, 13, 0.8);
+    border-color: black;
+    width: 1000px;
 }
 
 .text {
