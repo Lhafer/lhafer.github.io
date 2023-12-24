@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Sometype Mono' rel='stylesheet'>
     <title>Logan Shafer Portfolio</title>
@@ -16,7 +15,7 @@
 <body>
     <script src="index.js"></script>
     <div id="topBar">
-        <div class="topLink">
+        <div id="about_button" class="topLink">
             <a href="#about">About Me</a>
         </div>
         <div class="topLink">
@@ -26,11 +25,48 @@
             <a href="#contact">Contact</a>
         </div>
     </div>
+    <div class="underBanner" id="underBanner">
+        
+        <button class="showLess" onclick="unmove()">Show Less</button>
+        <table id="techStack">
+            <caption>Tech Stack</caption>
+            <tr>
+                <th>Front End</th>
+                <th>Back End</th>
+                <th>Additional Skills</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td></td>
+                <td>Java</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td></td>
+                <td>Python</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td></td>
+                <td>API'S</td>
+            </tr>
+            <tr>
+                <td>React.js</td>
+                <td>
 
+                </td>
+                <td>
+                    WebScraping
+                </td>
+            </tr>
+            <tr>    </tr>
+        </table>
+
+    </div>
     <div class="banner" id="about">
         <div class="text">Hi, I'm Logan Shafer.</div>
         <div class="text" id="textU">I'd like to help you develop your website.</div>
-        <button onclick="scrollBanner()" id="colorChangeButton">Learn More</button>
+        <button onclick="scrollBanner()" id="learnMore">Learn More</button>
     </div>
 
     <h1 id="projects">Projects</h1>

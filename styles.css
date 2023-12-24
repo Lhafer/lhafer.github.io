@@ -27,6 +27,7 @@ body {
   justify-content: center;
   box-shadow: 0px -10px 10px grey inset;
   transition: top 0.3s;
+  gap: 20px;
 }
 
 body.scrolled #topBar {
@@ -34,7 +35,6 @@ body.scrolled #topBar {
 }
 
 .topLink {
-  margin-left: 40px;
   height: 35px;
   width: 100px;
   border-style: ridge;
@@ -74,18 +74,72 @@ body.scrolled #topBar {
 .banner.moved {
   transform: translateY(-100vh); /* Move the banner upwards by its own height */
 }
-
+.banner.unmove {
+  transform: translateY(0vh);
+}
 /* Style for the banner image */
-
-#colorChangeButton {
+.underBanner {
   position: absolute;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+}
+.underBanner.show {
+  opacity: 1;
+}
+#techStack {
+  transform: translate(40vh, 20vh);
+}
+table {
+  border-collapse: collapse; /* Merge border spacing */
+  margin-bottom: 20px; /* Add some spacing between tables */
+  background-color: black;
+}
+
+/* Style table headers (th) */
+caption {
+  color: white;
+}
+th {
+  background-color: #f2f2f2; /* Light gray background for header cells */
+  padding: 12px;
+
+  border-bottom: 2px solid #ddd; /* Bottom border for header cells */
+}
+
+/* Style table rows (tr) */
+tr {
+  border-bottom: 1px solid #ddd; /* Bottom border for all rows */
+}
+
+/* Style table data cells (td) */
+td {
+  color: white;
+  padding: 10px;
+  text-align: left;
+  width: fit-content;
+}
+
+/* Add some hover effect for better user interaction */
+tr:hover {
+  background-color: #f5f5f5; /* Light background color on hover */
+}
+.showLess {
+  left: 48.5%;
+  top: 10%;
+}
+button {
+  background-color: rgba(248, 243, 243, 0.8);
+  padding: 3px;
+  position: absolute;
+}
+
+#learnMore {
+  border: none;
   transform: translate(-50%, -50%);
   left: 60%;
   top: 65%;
   opacity: 0.6;
-  background-color: rgba(248, 243, 243, 0.8);
-  padding: 3px;
-  border: none;
 }
 
 .text {
@@ -110,7 +164,7 @@ body.scrolled #topBar {
 #projects {
   color: white;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 110px;
   margin: -5%;
 }
 
