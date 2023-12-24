@@ -1,13 +1,16 @@
+var learning = false;
 window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-        document.body.classList.add("scrolled");
-    } else {
-        document.body.classList.remove("scrolled");
-    }
+  if (window.scrollY > 50 || learning) {
+    document.body.classList.add("scrolled");
+  } else {
+    document.body.classList.remove("scrolled");
+  }
 });
 
-const colorChangeButton = document.getElementsByTagName("colorChangeButton");
-colorChangeButton.addEventListener("click", function () {
-    // Add a class to change the button's color
-    body.colorChangeButton.classList.add("clicked");
-});
+function scrollBanner(element) {
+  var banner = document.getElementById("about");
+  // Add the 'moved' class to trigger the animation
+  banner.classList.add("moved");
+  document.body.classList.add("scrolled");
+  learning = true;
+}
